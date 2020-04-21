@@ -100,4 +100,6 @@ ENV OCTAVE_VERSION $OCTAVE_VERSION
 ENV LD_LIBRARY_PATH $OCTAVE_HOME/lib/octave/$OCTAVE_VERSION
 ENV PATH $OCTAVE_HOME/bin:$PATH
 
+RUN octave-cli --eval "pkg install -forge io"
+
 CMD ["octave"]
